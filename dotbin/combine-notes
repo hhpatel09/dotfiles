@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190425
+
+# script:
+for mdf in ./*.md; do
+  compile-notes $mdf
+done
+
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=all-notes.pdf *.pdf

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190326
+
+# script:
+
+add-ssh-keys
+
+for dd in $HOME/projects/*; do
+  pushd $dd
+  git pull
+  popd
+done

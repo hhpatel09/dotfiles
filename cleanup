@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+# remove the added directories
+rm -f ~/.vim
+rm -f ~/.bin
+rm -f ~/.mybashrc
+rm -f ~/.historyrc
+rm -f ~/.bash_logout
+rm -f ~/.vimrc
+rm -f ~/.gitconfig
+rm -f ~/.git_hooks
+rm -f ~/.zshrc
+rm -f ~/.zlogout
+rm -f ~/.oh-my-zsh
+rm -f ~/.ssh

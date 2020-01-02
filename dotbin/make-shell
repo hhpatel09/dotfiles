@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Author: abpwrs
+# Date: 20190325
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <name-of-new-shell>"
+  exit
+fi
+
+cat >"$1" <<EOF
+#!/usr/bin/env bash
+# Author: "$USER"
+# Date: $(date +%Y%m%d)
+
+# args:
+# 1 --
+# 2 --
+
+#if [[ \$# -ne 1 ]]; then
+#    echo "Usage: \$0 <param-1> <param-2> ..."
+#    exit
+#fi
+
+
+# script:
+
+
+EOF
+
+chmod 754 $1

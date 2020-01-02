@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190326
+
+if [ $# -ne 1 ]; then
+  echo "... Incorrect Usage ..."
+  echo "Usage: ${0} file_name.ext"
+  exit -1
+fi
+
+DATE=$(date +%Y%m%d)
+BASE_NAME=${1}
+FULL_NAME="${DATE}_${BASE_NAME}"
+touch ${FULL_NAME}

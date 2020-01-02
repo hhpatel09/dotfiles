@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+for f in mybashrc historyrc bash_logout; do
+  ln -s $(pwd)/$f ~/.$f
+done
+
+lastline_of_rc="$(cat ~/.bashrc | tail -n 1)"
+
+if [[ ! $lastline_of_rc == "source ~/.mybashrc" ]]; then
+  echo "source ~/.mybashrc" >>~/.bashrc
+fi

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190423
+
+# args:
+# 1 -- name of a notes file to compile to pdf slides
+# 2 --
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <notes-file>"
+  exit
+fi
+
+# script:
+name=$(basename $1 .md)
+pandoc -t beamer -s -o $name.pdf $1

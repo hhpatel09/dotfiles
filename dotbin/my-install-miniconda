@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190516
+
+# args:
+# 1 -- os type
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 (osx or linux)"
+  exit
+fi
+
+tmp_file_path="/tmp/miniconda-installer.sh"
+
+case $1 in
+  osx)
+    sh_url="https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+    ;;
+  linux)
+    sh_url="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+    ;;
+  *)
+    echo "invalid os type"
+    exit -1
+    ;;
+esac
+
+tmp_file_path="/tmp/miniconda-installer.sh"
+
+curl $sh_url -o $tmp_file_path
+chmod +x $tmp_file_path
+$tmp_file_path
+rm $tmp_file_path

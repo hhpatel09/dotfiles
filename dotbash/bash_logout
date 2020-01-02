@@ -1,0 +1,8 @@
+hname=`hostname -s`
+if [[ ! -d ~/.files/dotbash/logs/$hname ]]; then
+	mkdir ~/.files/dotbash/logs/$hname
+fi
+
+log_file=~/.files/dotbash/logs/`hostname -s`/`date +%Y%m`.log
+history | awk '{ $1=""; print }' >> $log_file
+sort -u $log_file -o $log_file

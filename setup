@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+git submodule update --init --recursive
+
+# run all of the individual setup scripts
+for directory in ./*; do
+  if [[ -d $directory ]]; then
+    pushd $directory
+    ./setup
+    popd
+  fi
+done

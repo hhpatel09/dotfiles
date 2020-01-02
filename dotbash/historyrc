@@ -1,0 +1,18 @@
+# history config
+
+# format date
+export HISTTIMEFORMAT="%Y%m%d %H:%M:%S"
+
+# save the last 50000 commands
+export HISTSIZE=10000
+
+# save the command immediately 
+export PROMPT_COMMAND='history -a'
+
+# ignore duplicate commands
+export HISTCONTROL=ignoredups
+
+# list of commands not to be added to history
+export HISTIGNORE="c:l:ll:ls:ps:history:vim:clear:cd:which:man:nano:pico:exit"
+
+

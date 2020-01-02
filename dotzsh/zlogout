@@ -1,0 +1,8 @@
+hname=`hostname -s`
+if [[ ! -d ~/.files/dotzsh/logs/$hname ]]; then
+	mkdir ~/.files/dotzsh/logs/$hname
+fi
+
+log_file=~/.files/dotzsh/logs/`hostname -s`/`date +%Y%m`.log
+fc -il 1 | awk '{ $1=""; print }' >> $log_file
+sort -u $log_file -o $log_file

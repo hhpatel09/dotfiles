@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Author: "alexpowers"
+# Date: 20190630
+
+# script:
+
+git config user.email "your-email@domain.ext"
+git config user.name "github-username"
+

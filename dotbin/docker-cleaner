@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190327
+
+# args:
+# 1 -- optional arg to for what to prune in docker
+# ---- options are container, image, network, volume, and system
+# 2 -- optional arg for flags to run command with
+
+FLAGS=""
+
+if [[ $# -eq 2 ]]; then
+  FLAGS=$2
+fi
+
+apply_clean() {
+  echo "Executing: docker $TARGET prune $FLAGS"
+  docker $TARGET prune $FLAGS
+}
+
+if [[ $# -lt 1 ]]; then
+  echo "No option specified, pruning system"
+  docker system prune
+else
+  TARGET=$1
+  case $TARGET in
+    container | image | network | volume | system) apply_clean ;;
+    *) echo "$TARGET is not a valid option" ;;
+  esac
+fi

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+# soft link this dotbin dir to ~/.bin
+ln -s $(pwd) ~/.bin

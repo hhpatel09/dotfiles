@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+# soft link the .vim directory here
+ln -s $(pwd) ~/.vim
+
+# link the vimrc file
+ln -s ~/.vim/vimrc ~/.vimrc

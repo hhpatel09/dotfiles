@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+if [[ $# -eq 1 ]]; then
+  ssh-add ~/.ssh/$1
+else
+  for s_key in ~/.ssh/*; do
+    if [[ -f $s_key ]]; then
+      ssh-add $s_key
+    fi
+  done
+fi

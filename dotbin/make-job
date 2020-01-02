@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190326
+
+# input validation
+if [[ ${#} -ne 1 ]]; then
+  # example usage
+  echo "Usage: ${0} name_without_spaces"
+  echo "Example: ${0} random_forest"
+  exit -1
+fi
+
+# Standard script setup
+FILENAME="$1.job"
+
+cat >$FILENAME <<EOF
+#!/usr/bin/env bash
+# Author: $USER
+# Date: $(date +%Y%m%d)
+
+# Argon Arguments
+# https://wiki.uiowa.edu/display/hpcdocs/Basic+Job+Submission
+
+# set name to be the same as the file
+#$ -N $1
+
+# set queue
+#$ -q SOME_QUEUE_YOU_HAVE_ACCESS_TO
+
+# set max wall-runtime to be two days
+#$ -l h_rt=48:00:00
+
+# set parallel env and number of cores (default to 16)
+#$ -pe smp 16
+
+# set standard output of file
+#$ -o $HOME/job_output/$1/$1_output
+
+# set standard error output file
+#$ -e $HOME/job_output/$1/$1_error
+
+# set my email address
+#$ -M your-email@domain.ext
+
+# set when I want emails (b: beginning, e: end, a: aborted, s: suspended)
+#$ -m beas
+
+# script here:
+
+EOF
+
+chmod 754 $FILENAME
+mkdir -p $HOME/job_output/${1}

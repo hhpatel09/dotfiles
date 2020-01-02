@@ -1,0 +1,24 @@
+[user]
+	email = your-email@domain.ext
+	name = github-username
+[core]
+    editor = vim
+[color]
+    ui = true
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+    cl = clone
+    br = branch
+    brv = branch -vv
+    bra = branch -a
+    brav = branch -a -vv
+    last = log -1 HEAD
+    unstage = reset HEAD
+    vis = visual
+    logg = log --decorate --graph
+    slog = log --oneline --decorate
+    slogg = log --oneline --decorate --graph
+[status]
+	submodulesummary = 5

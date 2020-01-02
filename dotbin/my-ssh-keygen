@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190519
+
+# args:
+# 1 --
+# 2 --
+
+#if [[ $# -ne 1 ]]; then
+#    echo "Usage: $0 <param-1> <param-2> ..."
+#    exit
+#fi
+
+# script:
+read -p "Enter an email to associate with the key: " email
+ssh-keygen -t rsa -b 4096 -C ${email}

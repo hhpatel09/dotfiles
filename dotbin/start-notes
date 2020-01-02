@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190423
+
+# args:
+# 1 -- name of notes file to start
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <name-of-notes-file>"
+  exit
+fi
+
+# script:
+DATE=$(date +%Y%m%d)
+BASE_NAME=${1}
+FULL_NAME="${DATE}_${BASE_NAME}.md"
+cat >$FULL_NAME <<EOF
+---
+title: NOTES
+author:
+- YOUR NAME
+theme: Copenhagen
+colortheme: wolverine
+---
+
+# Slide 1
+
+* list
+* of
+* elems
+
+# Slide 2
+
+\`\`\`bash
+touch test.html
+\`\`\` code snippets?
+
+# Slide 3
+
+nothing to see [here](https://www.google.com)
+
+EOF

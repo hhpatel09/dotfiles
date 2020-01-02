@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190326
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <name-of-new-command>"
+  exit
+fi
+
+filename="$HOME/.bin/$1"
+make-shell $filename
+
+chmod 754 $filename
+vim $filename

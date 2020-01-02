@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+for f in zshrc zlogout; do
+  ln -s $(pwd)/$f ~/.$f
+done
+
+ln -s $(pwd)/oh-my-zsh ~/.oh-my-zsh
+

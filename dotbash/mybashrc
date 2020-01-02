@@ -1,0 +1,46 @@
+# my bash configuration
+
+# source the history configuration
+source ~/.historyrc
+
+GIT_PROMPT_ONLY_IN_REPO=0
+GIT_PROMPT_SHOW_UPSTREAM=1
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+# my aliases
+alias l='ls -lh'
+alias ll='ls -lha'
+alias ls='ls -GFh'
+alias la='ls -ah'
+alias c='clear'
+alias cl='clear && l'
+
+# my command line
+BLUE="\[\033[36m\]"
+WHITE="\[\033[m\]"
+YELLOW="\[\033[33;1m\]"
+GREEN="\[\033[32m\]"
+RED="\[\033[31m\]"
+export PS1="${BLUE}\u${WHITE}@${RED}\h ${WHITE}<${YELLOW}\w${WHITE}> ${GREEN}$ ${WHITE}"
+export CLICOLORS=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# silently start ssh-agent
+eval $(ssh-agent -s) &>/dev/null
+
+# env variables
+
+# ITK & Slicer ENV VARS
+export ITK_DIR='~/.blds/itk-bld/'
+export SlicerExecutionModel_DIR='~/.blds/sem-bld/'
+
+# path additions
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+

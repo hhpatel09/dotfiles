@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Author: "abpwrs"
+# Date: 20190325
+
+# script:
+
+ln -s $(pwd)/gitconfig ~/.gitconfig
