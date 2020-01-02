@@ -1,6 +1,6 @@
 [user]
-	email = your-email@domain.ext
-	name = github-username
+    email = your-email@domain.ext
+    name = github-username
 [core]
     editor = vim
 [color]
@@ -21,4 +21,4 @@
     slog = log --oneline --decorate
     slogg = log --oneline --decorate --graph
 [status]
-	submodulesummary = 5
+    submodulesummary = 5
