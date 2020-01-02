@@ -1,5 +1,6 @@
 # dotfiles
-A repo for all my config files
+A repo for configuration file management and commandline history logging.     
+This is a public version of the system that I use.     
 ## Setup
 ```bash
 git clone https://github.com/abpwrs/dotfiles.git ~/.files/ 
