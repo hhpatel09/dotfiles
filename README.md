@@ -19,9 +19,9 @@ vim ~/.vimrc
 
 
 ## Power Level 10k
-Favorite theme
+Favorite theme:
 
-Powerlevel10k (https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+Powerlevel10k {https://github.com/romkatv/powerlevel10k#oh-my-zsh}
 
 
 
