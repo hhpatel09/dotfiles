@@ -18,7 +18,10 @@ vim ~/.vimrc
 * bin (my scripts)       
 
 
+## Power Level 10k
+Favorite theme
 
+Powerlevel10k(https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 
 
 
