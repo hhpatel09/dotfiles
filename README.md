@@ -24,6 +24,5 @@ Favorite theme:
 Powerlevel10k (https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 
 
-
-
-
+## ZSH Text Highlighting
+https://github.com/zsh-users/zsh-syntax-highlighting
