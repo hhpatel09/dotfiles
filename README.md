@@ -26,3 +26,6 @@ Powerlevel10k (https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 
 ## ZSH Text Highlighting
 https://github.com/zsh-users/zsh-syntax-highlighting
+
+## History Beginning Search
+https://unix.stackexchange.com/questions/16101/zsh-search-history-on-up-and-down-keys/100860#100860
